@@ -1,0 +1,6 @@
+[package]
+name = "mod_sample"
+version = "0.1.0"
+authors = ["yuta <yu.ichiko@gmail.com>"]
+
+[dependencies]
