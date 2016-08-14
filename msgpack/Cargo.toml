@@ -1,0 +1,7 @@
+[package]
+name = "msgpack"
+version = "0.1.0"
+authors = ["yuta <yu.ichiko@gmail.com>"]
+
+[dependencies]
+rmp = "^0.7"

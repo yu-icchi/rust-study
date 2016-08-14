@@ -2,4 +2,6 @@ pub fn hello() {
     println!("Hello, World!!");
 }
 
-pub mod bar;
+pub use self::bar::hello as greet;
+
+mod bar;

@@ -1,0 +1,7 @@
+[package]
+name = "lz4"
+version = "0.1.0"
+authors = ["yuta <yu.ichiko@gmail.com>"]
+
+[dependencies]
+lz4 = "*"

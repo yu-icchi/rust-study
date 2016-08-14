@@ -9,5 +9,5 @@ fn hello() {
 fn main() {
     hello();
     foo::hello();
-    foo::bar::hello();
+    foo::greet();
 }
