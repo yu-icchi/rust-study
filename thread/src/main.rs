@@ -8,11 +8,12 @@ use std::process::{Command, Stdio};
 static NTHREADS: i32 = 10;
 
 fn main() {
-    threads();
-    channels();
-    child_process();
-    pipes();
-    wait();
+//    threads();
+//    channels();
+//    child_process();
+//    pipes();
+//    wait();
+    mpsc();
 }
 
 fn threads() {
@@ -86,4 +87,18 @@ fn wait() {
     let mut child = std::process::Command::new("sleep").arg("5").spawn().unwrap();
     let _result = child.wait().unwrap();
     println!("reached end of main");
+}
+
+fn mpsc() {
+    let data = vec![1, 2, 3, 4, 5];
+    let (tx, rx) = mpsc::channel();
+    for &x in data.iter() {
+        let tx = tx.clone();
+        thread::spawn(move || {
+            tx.send(x * 2);
+        });
+    }
+    for _ in data.iter() {
+        println!("{:?}", rx.recv());
+    }
 }

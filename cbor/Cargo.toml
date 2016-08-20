@@ -1,7 +1,7 @@
 [package]
-name = "msgpack"
+name = "cbor"
 version = "0.1.0"
 authors = ["yuta <yu.ichiko@gmail.com>"]
 
 [dependencies]
-rmp = "0.7.5"
+cbor = "0.4.0"
